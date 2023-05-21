@@ -26,7 +26,7 @@
             map.locate({setView: true, maxZoom: 15});
             map.on('locationerror', (e) => alert(e.message));
 
-            fetch('/groups.json')
+            fetch('groups.json')
                 .then((response) => response.json())
                 .then((groups) => {
                     var layers = {};
@@ -52,7 +52,7 @@
 
                         var icon = iconFor(layerName);
                         var marker = L.marker(latLng, { icon: icon })
-                            .bindPopup(`<strong>#${i}:</strong> <a href="/detail.html?i=${i}" target="_blank">${restaurant.name}</a>`);
+                            .bindPopup(`<strong>#${i}:</strong> <a href="detail.html?i=${i}" target="_blank">${restaurant.name}</a>`);
                         layers[layerName].addLayer(marker);
                     });
 

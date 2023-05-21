@@ -9,7 +9,7 @@
 		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script>
-			fetch('/groups.json')
+			fetch('groups.json')
 				.then((response) => response.json())
 				.then((groups) => {
 					let params = new URLSearchParams(document.location.search);
@@ -38,7 +38,7 @@
 
 								const title = document.createElement("h1");
 								const titleLink = document.createElement("a");
-								titleLink.setAttribute("href", "/detail.html?i="+i);
+								titleLink.setAttribute("href", "detail.html?i="+i);
 								titleLink.innerHTML = entry.name;
 								title.appendChild(titleLink);
 								article.appendChild(title);

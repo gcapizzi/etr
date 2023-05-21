@@ -6,7 +6,7 @@
 	<body>
 		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script>
-			fetch('/groups.json')
+			fetch('groups.json')
 				.then((response) => response.json())
 				.then((groups) => {
 					let params = new URLSearchParams(document.location.search);
@@ -30,7 +30,7 @@
 						article.appendChild(title);
 
 						const subtitle = document.createElement("a");
-						subtitle.setAttribute("href", "/article.html?id="+entry.article_id);
+						subtitle.setAttribute("href", "article.html?id="+entry.article_id);
 						subtitle.innerHTML = entry.article_title;
 						article.appendChild(subtitle);
 
