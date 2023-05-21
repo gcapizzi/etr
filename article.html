@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	</head>
+	<body>
+		<h1 id="title"></h1>
+		<div id="map" style="height: 50%"></div>
+		<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script>
+			fetch('/groups.json')
+				.then((response) => response.json())
+				.then((groups) => {
+					let params = new URLSearchParams(document.location.search);
+					let id = Number.parseInt(params.get("id"), 10);
+
+					var center = [51.505, -0.09];
+					var radius = 30000;
+					let zoom = 12;
+
+					var map = L.map('map').setView(center, zoom);
+					L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+						maxZoom: 19,
+						attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+					}).addTo(map);
+
+					groups.forEach((group, i) => {
+						group.forEach((entry) => {
+							if (entry.article_id == id) {
+								L.marker([entry.latitude, entry.longitude])
+									.bindPopup(entry.name)
+									.addTo(map);
+
+								document.getElementById("title").innerHTML = entry.article_title;
+
+								const article = document.createElement("article");
+
+								const title = document.createElement("h1");
+								const titleLink = document.createElement("a");
+								titleLink.setAttribute("href", "/detail.html?i="+i);
+								titleLink.innerHTML = entry.name;
+								title.appendChild(titleLink);
+								article.appendChild(title);
+
+								const body = document.createElement("p");
+								body.innerHTML = marked.parse(entry.description);
+								article.appendChild(body);
+
+								document.body.appendChild(article);
+							}
+						});
+					});
+				});
+		</script>
+	</body>
+</html>

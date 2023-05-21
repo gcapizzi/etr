@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	</head>
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script>
+			fetch('/groups.json')
+				.then((response) => response.json())
+				.then((groups) => {
+					let params = new URLSearchParams(document.location.search);
+					let index = Number.parseInt(params.get("i"), 10);
+					let group = groups[index];
+
+					const mapsLink = document.createElement("a");
+					let queryString = `query=${group[0].name} ${group[0].address}`;
+					if (group[0].place_id != null) {
+						queryString += `query_place_id=${group[0].place_id}`;
+					}
+					mapsLink.setAttribute("href", encodeURI(`https://www.google.com/maps/search/?api=1&${queryString}`));
+					mapsLink.innerHTML = "Google Maps";
+					document.body.appendChild(mapsLink);
+
+					group.forEach((entry) => {
+						const article = document.createElement("article");
+
+						const title = document.createElement("h1");
+						title.innerHTML = entry.name;
+						article.appendChild(title);
+
+						const subtitle = document.createElement("a");
+						subtitle.setAttribute("href", "/article.html?id="+entry.article_id);
+						subtitle.innerHTML = entry.article_title;
+						article.appendChild(subtitle);
+
+						const body = document.createElement("p");
+						body.innerHTML = marked.parse(entry.description);
+						article.appendChild(body);
+
+						document.body.appendChild(article);
+					})
+				});
+		</script>
+	</body>
+</html>

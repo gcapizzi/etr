@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    </head>
+    <body>
+        <div id="map" style="height: 100%"></div>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <script>
+            var center = [51.505, -0.09];
+            var radius = 30000;
+            let zoom = 12;
+            var thresholds = [
+                [15, "red"],
+                [10, "orange"],
+                [5, "gold"],
+                [1, "grey"],
+            ];
+
+            var map = L.map('map').setView(center, zoom);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            map.locate({setView: true, maxZoom: 15});
+            map.on('locationerror', (e) => alert(e.message));
+
+            fetch('/groups.json')
+                .then((response) => response.json())
+                .then((groups) => {
+                    var layers = {};
+                    thresholds.forEach(([_, t]) => layers[t] = L.layerGroup());
+                    layers["green"] = L.layerGroup();
+
+                    groups.forEach((group, i) => {
+                        group.sort(function (a, b) {
+                            return a.name.length - b.name.length
+                        });
+                        var restaurant = group[0];
+                        var latLng = [restaurant.latitude, restaurant.longitude];
+
+                        if (map.distance(center, latLng) > radius) {
+                            return;
+                        }
+
+                        var layerName = thresholds.find(([n, _]) => group.length >= n)[1];
+                        if (restaurant.visited) {
+                            console.log(restaurant)
+                            layerName = "green"
+                        }
+
+                        var icon = iconFor(layerName);
+                        var marker = L.marker(latLng, { icon: icon })
+                            .bindPopup(`<strong>#${i}:</strong> <a href="/detail.html?i=${i}" target="_blank">${restaurant.name}</a>`);
+                        layers[layerName].addLayer(marker);
+                    });
+
+                    Object.values(layers).forEach((l) => l.addTo(map));
+                    L.control.layers(null, layers).addTo(map);
+                });
+
+            function iconFor(colour) {
+                return new L.Icon({
+                    iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${colour}.png`,
+                    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize: [41, 41]
+                });
+            }
+        </script>
+    </body>
+</html>
