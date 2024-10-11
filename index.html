@@ -11,9 +11,9 @@
             var radius = 30000;
             let zoom = 12;
             var thresholds = [
-                [15, "red"],
-                [10, "orange"],
-                [5, "gold"],
+                [10, "red"],
+                [5, "orange"],
+                [2, "gold"],
                 [1, "grey"],
             ];
 
@@ -26,32 +26,35 @@
             map.locate({setView: true, maxZoom: 15});
             map.on('locationerror', (e) => alert(e.message));
 
-            fetch('groups.json')
+            fetch('articles.json')
                 .then((response) => response.json())
-                .then((groups) => {
-                    var layers = {};
-                    thresholds.forEach(([_, t]) => layers[t] = L.layerGroup());
-                    layers["green"] = L.layerGroup();
-
-                    groups.forEach((group, i) => {
-                        group.sort(function (a, b) {
+                .then((articles) => {
+                    var groups = Object.groupBy(
+                        Object.values(articles).flatMap((a) => a.restaurants),
+                        (r) => r.place_id,
+                    );
+                    var restaurants = Object.values(groups).map((g) => {
+                        g.sort(function (a, b) {
                             return a.name.length - b.name.length
                         });
-                        var restaurant = group[0];
-                        var latLng = [restaurant.latitude, restaurant.longitude];
+                        return {
+                            name: g[0].name,
+                            latLng: [g[0].latitude, g[0].longitude],
+                            score: g.length,
+                        }
+                    });
 
-                        if (map.distance(center, latLng) > radius) {
+                    var layers = {};
+                    thresholds.forEach(([_, t]) => layers[t] = L.layerGroup());
+                    restaurants.forEach((r, i) => {
+                        if (map.distance(center, r.latLng) > radius) {
                             return;
                         }
 
-                        var layerName = thresholds.find(([n, _]) => group.length >= n)[1];
-                        if (restaurant.visited) {
-                            layerName = "green"
-                        }
-
+                        var layerName = thresholds.find(([n, _]) => r.score >= n)[1];
                         var icon = iconFor(layerName);
-                        var marker = L.marker(latLng, { icon: icon })
-                            .bindPopup(`<strong>#${i}:</strong> <a href="detail.html?i=${i}" target="_blank">${restaurant.name}</a>`);
+                        var marker = L.marker(r.latLng, { icon: icon })
+                            .bindPopup(`<strong>#${i}:</strong> <a href="detail.html?i=${i}" target="_blank">${r.name}</a>`);
                         layers[layerName].addLayer(marker);
                     });
 

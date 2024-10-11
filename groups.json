@@ -9741,6 +9741,7 @@
   [
     {
       "name": "Gloria",
+      "visited": true,
       "description": "This new Shoreditch restaurant was and remains *a lot*: Youporn pizza; cacio e pepe served out of a wheel of cheese; a lemon meringue pie almost comically large. What Parisian restaurant group Big Mamma’s London debut captured was a sense of hedonistic maximalism — to serve all of these things without irony or undercutting, and to revel in the accompanying fun. Its bright yellow exterior and surfeit of foliage in the heart of Shoreditch, moments from the Nobu hotel, also marked a new era in London’s formerly hipster-forward neighbourhood.",
       "latitude": 51.525105,
       "longitude": -0.0813514,
@@ -9754,6 +9755,7 @@
     },
     {
       "name": "Gloria",
+      "visited": true,
       "description": "Gloria is a lot: “Youporn” pizza (good base); cacio e pepe served out of a wheel of cheese; a lemon meringue pie bigger than necessary. What Parisian restaurant group Big Mamma’s London debut captures is a sense of hedonistic maximalism — to serve all of these things without irony or undercutting, and to revel in the fun that comes with them. Its bright yellow exterior and surfeit of foliage in the heart of London’s most normcore-cool neighbourhood marks it out even further. Now also home to Napoli Gang, a delivery-only offering.",
       "latitude": 51.525105,
       "longitude": -0.0813514,
@@ -9767,6 +9769,7 @@
     },
     {
       "name": "Gloria",
+      "visited": true,
       "description": "Maximalism is the memo at Big Mamma Group’s Gloria, and with a menu as yet unreleased expect to follow in the wildly extra pasta in wheels of cheese, towering meringue pies, and tiramisus more of largesse than finesse that has made this Shoreditch hotspot so irresistibly popular.",
       "latitude": 51.525105,
       "longitude": -0.0813514,
@@ -9780,6 +9783,7 @@
     },
     {
       "name": "Gloria",
+      "visited": true,
       "description": "It might not be as ludicrous as the lemon meringue pie or have as many layers as the lasagne, but Gloria’s tiramisù is still pretty extra. Rising from its cute ceramic container like a soufflé, it’s all billowing drifts of mascarpone and whisper-light sponge.",
       "latitude": 51.525105,
       "longitude": -0.0813514,
@@ -9793,6 +9797,7 @@
     },
     {
       "name": "Lemon meringue pie at Gloria",
+      "visited": true,
       "description": "Presentationally OTT, exuberantly calorific, short on anything resembling real nutritional value — dishes with names like Filippo’s Big Balls and the YouPorn pizza brought the kitschy cringe, but really there was no better avatar for one of the most extra openings of the year than this towering confection. The fact that its meringue topping is basically just confected hot air feels oddly fitting, too.",
       "latitude": 51.525105,
       "longitude": -0.0813514,
@@ -10187,6 +10192,7 @@
   [
     {
       "name": "Dishoom Kensington",
+      "visited": true,
       "description": "The bacon sandwich, a tried-and-true hangover cure, finds its fullest and most effective expression in Dishoom’s feted bacon naan. Also recommended: kejriwal (fried eggs on chilli-cheese toast), the double-carb vada pau and all of the biryanis.",
       "latitude": 51.50127,
       "longitude": -0.1911708,
@@ -10200,6 +10206,7 @@
     },
     {
       "name": "Dishoom Kensington",
+      "visited": true,
       "description": "The Bombay cafe-inspired group’s site off Kensgington High Street is a good place for a cup of chai and a bacon naan in the morning, a chicken ruby murray or black dal at lunch, or for a group meal with a few beers at the end of a long day pounding the streets.",
       "latitude": 51.50127,
       "longitude": -0.1911708,
@@ -10213,6 +10220,7 @@
     },
     {
       "name": "Dishoom Kensington",
+      "visited": true,
       "description": "The Bombay cafe-inspired group’s site off Kensgington High Street is a good place for a cup of chai and a bacon naan in the morning, a chicken ruby murray or black dal at lunch, or for a group meal with a few beers at the end of a long day pounding the streets.",
       "latitude": 51.50127,
       "longitude": -0.1911708,
@@ -10226,6 +10234,7 @@
     },
     {
       "name": "Dishoom Kensington",
+      "visited": true,
       "description": "Each of the Dishooms have a Permit Room, a bar that is open for everyone to pop in for a drink, but those dining do get priority. Their non-alcoholic menu is the longest of all these bars, and there’s also a low- and no-alcohol wine and beer list. There is a lot of fun to the cocktail list with plays on classic cocktails, such as a Collins, Spritz, Mojito, Espresso Martini and the incredible sober Negroni, which is made with a “gin” and chai “vermouth” made by the restaurant.",
       "latitude": 51.501266,
       "longitude": -0.191139,
@@ -10239,6 +10248,7 @@
     },
     {
       "name": "Dishoom Kensington",
+      "visited": true,
       "description": "Probably Dishoom’s most famous dish. For good reason. Wildly inauthentic and proud. Naan, generally, is an underrated vehicle for any sandwich, which goes someway to explaining the triumph here. Bacon, (and egg), chilli jam, a little yoghurt, and chopped coriander — all on a chewy little folded naan, which soaks up the rendered fat. Eat quickly. *—Adam Coghlan*",
       "latitude": 51.50127,
       "longitude": -0.1911708,
@@ -22552,6 +22562,7 @@
   [
     {
       "name": "Roti King",
+      "visited": true,
       "description": " The Euston-based basement diner’s *roti canai* must be among the best meals that £5 can buy. The art of roti making has been truly mastered here, making the bread far more than just a vehicle for its accompanying dal. Great food at an almost unbelievable price results in a constant queue but individuals will make their way down the steps much faster. Go alone, and have the vegetarian dal.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -22565,6 +22576,7 @@
     },
     {
       "name": "Roti King",
+      "visited": true,
       "description": "London’s favourite Malaysian Tamil restaurant’s phenomenal, flaky, fat-enriched roti canai, lentil curry and spicy noodle assemblies are all perfect for settling the stomach and the spirit. They’re now available in [Victoria’s Market Hall](https://london.eater.com/2018/11/21/18088208/market-halls-victoria-london-food-hall-restaurants-roti-king-koya-montys-deli) too — good news for hangovers that began in south-east London, Brighton, or Kent.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -22578,6 +22590,7 @@
     },
     {
       "name": "Roti King",
+      "visited": true,
       "description": "The area around Euston station is replete with no-frills, delicious places to eat. This little Malaysian basement setup from chef Sugen Gopal on Doric Way may be the best. Two pieces of freshly made, high-moisture roti canai — eat in or take-away — are best served with curry dhal. That speciality costs only £4.50, and is available for takeaway. Roti King is also listed on the Dishpatch platform.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -22591,6 +22604,7 @@
     },
     {
       "name": "Roti King",
+      "visited": true,
       "description": "Kalpana Sugendran Sugendran’s Roti King is both one of London’s indisputable food success stories and a cautionary tale of how property has affected small food businesses — from a small stall at Colindale’s ill-fated Oriental City, through short lived stints at East Ham’s market and Charing Cross Road’s now completely redeveloped Malaysia Kopitiam, to two successful restaurants: one in a Euston basement and the other at Victoria’s Market Halls. The roti canai, oily, flaky breads, charred and hilly, that soak in luxurious dal, meat, or fish curries is still the dish to order. The other Malaysian dishes have massively improved from opening, primarily due to one of the wok masters who splits his time between Roti King and Gopal’s Corner nailing the smokiness on the mee goreng. Order it, and add some of the kangkung belacan for health.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -22604,6 +22618,7 @@
     },
     {
       "name": "Roti King",
+      "visited": true,
       "description": "Less a destination than a necessary quarterly, monthly or — for a Euston local — weekly check in, this unassuming restaurant on Doric Way offers two unsurpassable roti canai, best served with curry dahl, for under a fiver. Its citywide reputation has not dampened its community essentialism, serving residents and workers day-in, day-out.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -22617,6 +22632,7 @@
     },
     {
       "name": "Roti King Euston",
+      "visited": true,
       "description": "Chicken curry, fish curry, or dal, alongside still some of the best roti canai in London. Roti King knows not to mess around.",
       "latitude": 51.529095,
       "longitude": -0.1319957,
@@ -22630,6 +22646,7 @@
     },
     {
       "name": "Nasi Lemak Ayam Goreng Berempah @ Roti King",
+      "visited": true,
       "description": "While the eponymous roti — expertly flipped, folded, and cooked to a golden crisp in the open kitchen — have made mamak Malaysian restaurant Roti King so beloved, diners might consider saving their roti for dessert (banana is best) and trying the nasi lemak instead. A generous ball of creamy coconut rice sits centre stage, fringed all round with anchovy sambal, a boiled egg, little dried fried anchovies, salted peanuts, and cucumber — each new item there to compliment or offset the last. At this Euston landmark, the warming rice and anchovy dish is served with fragrant spiced fried chicken, to make ayam goreng berempah. A long coil of hungry students waiting round the block was once a daily certainty at Roti King, but a new online queuing system means there has never been an easier moment to visit.",
       "latitude": 51.529102,
       "longitude": -0.1320095,
@@ -38045,6 +38062,7 @@
   [
     {
       "name": "Dishoom Canary Wharf",
+      "visited": true,
       "description": "Self-styled Bombay café [Dishoom](https://london.eater.com/venue/dishoom-3) has opened gigantic London restaurant, sprawled across 8,000 square feet. With 355 covers, and an extensive menu to match, this new branch is well suited to any occasion. Featuring a location-specific signature lobster dish and cocktails, the group’s ninth restaurant also offers the hugely popular black dal and a Maharashtrian-influenced small plates menu for a sensory feast.",
       "latitude": 51.503124,
       "longitude": -0.0135691,
@@ -49986,6 +50004,7 @@
   [
     {
       "name": "Dishoom",
+      "visited": true,
       "description": "This Bombay-style chain’s bacon naan roll with chilli tomato jam and cream cheese is justly famous. The bacon is sourced from award-winning producer Ramsay of Carluke, and the naan are served still-warm and sprinkled with fresh herbs. For something a little more substantial, the Big Bombay features spicy, award-winning sausages from Maynard’s Farm, north of Ludlow (a mecca for tube meat) and masala-spiced baked beans. It’s worth topping it off with a banana and mango lassi, too.",
       "latitude": 51.512432,
       "longitude": -0.1269096,
@@ -49999,6 +50018,7 @@
     },
     {
       "name": "Dishoom",
+      "visited": true,
       "description": "So much has been written about London’s best-known and influential Indian restaurant — which has since morphed into a U.K.-wide chain — that it feels like an old friend, even to those who have never visited. There were other contemporary, mid-price Indians before this Covent Garden original burst onto the capital’s dining scene less than a decade ago, but nobody remembers them. Indian restaurants have changed so dramatically since then that it’s easy to forget just how ground-breaking it was, demonstrating the power of storytelling. That story — of the fading Irani cafés little known outside Mumbai — triggered an interest in them internationally, including in India, giving them a new lease of life. The best way of experiencing Irani café classics — and Parsi food generally — is by visiting for breakfast and ordering as many items with eggs as appetite allows. Then finish by lingering over bun maska and chocolate chai.",
       "latitude": 51.512432,
       "longitude": -0.1269096,
@@ -50441,6 +50461,7 @@
   [
     {
       "name": "Dishoom King's Cross",
+      "visited": true,
       "description": "Possibly Dishoom’s most celebrated, and argued-over dish. A soft, folded naan is filled with Ginger Pig rashers, cream cheese, chilli spiked tomato jam and coriander. It’s a classic sweet-salty-spicy-creamy combination that just works, and long may it remain on the menu.",
       "latitude": 51.536175,
       "longitude": -0.1254483,
@@ -50454,6 +50475,7 @@
     },
     {
       "name": "Dishoom King's Cross",
+      "visited": true,
       "description": "Not only is the King’s Cross branch of Dishoom’s mini London group perhaps the best of the lot for buggy parking, it services the needs of older children, too, offering what it calls “one plate meals for little Dishoom-wallas.” For £7.50, kids can choose from either a mildly spiced grilled chicken thigh or paneer tikka with peppers, both of which are served with Bombay potatoes, slaw, and a glass of fruit juice. It’s mostly indoor dining, but there are a few outdoor tables.",
       "latitude": 51.536175,
       "longitude": -0.1254483,
@@ -50467,6 +50489,7 @@
     },
     {
       "name": "Dishoom King's Cross",
+      "visited": true,
       "description": "It’s beloved chain Dishoom, inspired by Mumbai’s Irani cafes. Get the bacon naan. Get the vada pav. Get the keema pav. Get the chef’s special — the part which is unique to King’s Cross — of lamb nihari.",
       "latitude": 51.536175,
       "longitude": -0.1254483,
