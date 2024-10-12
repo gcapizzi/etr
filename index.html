@@ -41,6 +41,7 @@
                             name: g[0].name,
                             latLng: [g[0].latitude, g[0].longitude],
                             score: g.length,
+                            placeId: g[0].place_id,
                         }
                     });
 
@@ -54,7 +55,7 @@
                         var layerName = thresholds.find(([n, _]) => r.score >= n)[1];
                         var icon = iconFor(layerName);
                         var marker = L.marker(r.latLng, { icon: icon })
-                            .bindPopup(`<strong>#${i}:</strong> <a href="detail.html?i=${i}" target="_blank">${r.name}</a>`);
+                            .bindPopup(`<a href="detail.html?place_id=${r.placeId}" target="_blank">${r.name}</a>`);
                         layers[layerName].addLayer(marker);
                     });
 
